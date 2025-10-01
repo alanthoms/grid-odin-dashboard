@@ -61,7 +61,9 @@ h6 {
 p {
     text-wrap: pretty;
 }
-
+div{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 h1,
 h2,
 h3,
@@ -101,16 +103,15 @@ h6 {
 
 .search-bar {
     display: flex;
-    gap: 0.5rem;
-    justify-content: space-between;
+    gap: 0.7rem;
+    justify-content: space-between; 
 }
 
 .profile-section {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
-    padding: 0 0.5rem;
+    margin: 0px 1rem;
 }
 
 
@@ -185,8 +186,7 @@ h6 {
 button,
 .submit {
   display: block;
-  margin: 20px auto 0px;
-  padding: 12px 4rem;
+  padding: 12px 1rem;
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
@@ -232,12 +232,13 @@ input {
   display: block;
   font-size: 100%;
   box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
+  padding: 0.6rem 1.2rem;
 }
 
 input {
   border-radius: 5px;
+  width: 100%;
+  height: 3rem;
   color:#2e1d30;
   background-color: #f0f0f0;
 }
@@ -246,4 +247,144 @@ input:hover,
 input:focus {
   background-color: #eeeeee;
   color:#14142b;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: clamp(200px, 18vw, 260px);
+  background-color: #1c0f14;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: fixed;     /* Fixed sidebar */
+  top: 0;
+  left: 0;
+  height: 100vh;       /* Full height */
+  overflow-y: auto;    /* Scroll if long */
+}
+
+.sidebar h1 {
+    font-size: 2rem;           /* bigger dashboard title */
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: white 0 0 3px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.sidebar a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+  background: #302033;
+  color: #fff;
+}
+
+
+.sidebar li a {
+    font-size: 1.25rem;          /* bigger nav link text */
+    font-weight: 500;
+    text-decoration: none;
+    color: #ccc;
+    padding: 0.75rem 1rem;
+    display: block;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar li a:hover {
+    background-color: #402a44;   /* subtle hover background */
+    color: #fff;
+    font-weight: 600;            /* slightly bolder on hover */
+    transform: translateX(5px);  /* small slide effect on hover */
+}
+
+/* Optional: active link styling */
+.sidebar li a.active {
+    background-color: #5c3a5e;
+    color: #fff;
+    font-weight: 700;
+}
+/* Content shift (because sidebar is fixed) */
+.content {
+  margin-left: clamp(200px, 18vw, 260px);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header (search + profile) */
+.header {
+  background: #241c21;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  position: sticky; /* stays at top */
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.header .search-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  align-items: center;
+}
+
+.header .profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Workspace takes the rest */
+.workspace {
+  flex: 1;
+  overflow-y: auto;
+  background-color: rgb(181, 181, 181);
+  padding: 2em;
+}
+
+
+.logo {
+  background-image: url('odin-lined.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  /* Adjust the width as needed */
+  height: 100px;
+  /* Adjust the height as needed */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

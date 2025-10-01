@@ -7,12 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 
+    <link rel="icon" type="image/x-icon" href="odin-lined.png">
+
 </head>
 
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>Dashboard</h1>
+            <div class = "sidebar-header">
+                <div class="logo"></div>
+                <h1>Dashboard</h1>
+            </div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -20,31 +25,38 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
+
         <div class="content">
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button>Search</button>
-                <button>Profile</button>
+            <!-- HEADER -->
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+                <div class="profile-section">
+                    <img src="lmao.png" alt="Profile Picture">
+                    <div>
+                        <h2>John Doe</h2>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
             </div>
-            <div class="profile-section">
-                <img src="profile.jpg" alt="Profile Picture">
-                <h1>Hello, World!</h1>
-                <h2>John Doe</h2>
-                <p>Web Developer</p>
-            </div>
+
+            <!-- WORKSPACE -->
             <div class="workspace gradient-background">
                 <div class="projects">
                     <h2>Projects</h2>
                     <div class="project-storage">
-                        <div class="project-item card">Project 1 <p>hey</p>
-                        </div>
+                        <div class="project-item card">Project 1</div>
                         <div class="project-item card">Project 2</div>
                         <div class="project-item card">Project 3</div>
                         <div class="project-item card">Project 4</div>
                         <div class="project-item card">Project 5</div>
                         <div class="project-item card">Project 6</div>
                         <div class="project-item card">Project 7</div>
-
+                        <div class="project-item card">Project 8</div>
+                        <div class="project-item card">Project 9</div>
+                        <div class="project-item card">Project 10</div>
                     </div>
                 </div>
                 <div class="notes">
@@ -52,15 +64,14 @@
                     <div class="note-item card">Note 1</div>
                     <div class="note-item card">Note 2</div>
                     <div class="note-item card">Note 3</div>
-                </div>
-                <div class="updates">
-                    <h2>Updates</h2>
-                    <div class="update-item card">Update 1</div>
-                    <div class="update-item card">Update 2</div>
-                    <div class="update-item card">Update 3</div>
+                    <div class="updates">
+                        <h2>Updates</h2>
+                        <div class="update-item card">Update 1</div>
+                        <div class="update-item card">Update 2</div>
+                        <div class="update-item card">Update 3</div>
+                    </div>
                 </div>
             </div>
-
         </div>
 
 
