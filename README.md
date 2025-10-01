@@ -1,1 +1,1 @@
-# grid-odin-dashboard
+# grid-odin-dashboard using css grid to create an admin dashboard
