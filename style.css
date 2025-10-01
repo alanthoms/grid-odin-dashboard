@@ -22,6 +22,8 @@ body {
     line-height: 1.5;
     /* 5. Improve text rendering */
     -webkit-font-smoothing: antialiased;
+
+    background-color: rgb(36, 28, 33);
 }
 
 /* 6. Improve media defaults */
@@ -51,6 +53,8 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* 9. Improve line wrapping */
@@ -85,14 +89,13 @@ h6 {
 
 .sidebar {
     width: clamp(180px, 20vw, 300px);
-    background: #222;
+    background-color: #1c0f14;
     color: white;
 }
 
 .content {
     flex: 1;
     /* fills the remaining space */
-    padding: 1rem;
     height: 100%;
 }
 
@@ -114,13 +117,133 @@ h6 {
 .workspace {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     background-color: rgb(181, 181, 181);
     height: 100%;
+    padding: 2em;
 }
 
 .project-storage {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.projects{
+    grid-row: 1/-1;
+    padding-right: 1rem;
+}
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: 0.3s;
+  background-color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 2px; /* optional for smoother look */
+}
+
+.projects .card{
+    height: 150px;
+    width: 150px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 1);
+}
+
+.gradient-background {
+  background: linear-gradient(39deg,#90a295,#4a4547,#880452);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.notes, .updates{
+  grid-column: 2/3;
+  gap: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.notes .card,
+.updates .card {
+  background-color: #f0f0f0;
+  height: 50px;
+} 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button,
+.submit {
+  display: block;
+  margin: 20px auto 0px;
+  padding: 12px 4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(43, 30, 45);
+  /* dark, subtle base */
+  border: 1px solid #8d8d8d;
+  /* subtle outline */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: 0.4s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hover */
+button:hover,
+.submit:hover {
+  background-color: #302033;
+  /* slightly lighter dark */
+  transform: translateY(1px);
+  border-color: #8d8d8d;
+
+}
+
+/* Pressed / Active */
+button:active,
+.submit:active {
+  background-color: #583456;
+  /* darker shade */
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  border-color: white;
+}
+
+
+
+
+button,
+label,
+input {
+  display: block;
+  font-size: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+input {
+  border-radius: 5px;
+  color:#2e1d30;
+  background-color: #f0f0f0;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+  color:#14142b;
 }
